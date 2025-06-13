@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Data Input Form</title>
+</head>
+<body>
+    <div>
+        <h2>Enter Boston House Data</h2>
+        <p>Please provide the property details below:</p>
+
+        <!-- The form targets the '/predict' endpoint (you'll need to create this in Flask for prediction) -->
+        <form action="/predict" method="POST">
+
+            <!-- 1. CRIM: per capita crime rate by town -->
+            <div>
+                <label for="crim">CRIM (Crime Rate)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="crim"
+                    name="crim"
+                    placeholder="e.g., 0.00632"
+                    required
+                >
+            </div>
+            <!-- 2. ZN: proportion of residential land zoned for lots over 25,000 sq.ft. -->
+            <div>
+                <label for="zn">ZN (Residential Land Prop.)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="zn"
+                    name="zn"
+                    placeholder="e.g., 18.0"
+                    required
+                >
+            </div>
+            <!-- 3. INDUS: proportion of non-retail business acres per town -->
+            <div>
+                <label for="indus">INDUS (Non-Retail Business Prop.)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="indus"
+                    name="indus"
+                    placeholder="e.g., 2.31"
+                    required
+                >
+            </div>
+            <!-- 4. CHAS: Charles River dummy variable (= 1 if tract bounds river; 0 otherwise) -->
+            <div>
+                <label for="chas">CHAS (Bounds Charles River)</label>
+                <select
+                    id="chas"
+                    name="chas"
+                    required
+                >
+                    <option value="">Select option</option>
+                    <option value="1">Yes (Bounds River)</option>
+                    <option value="0">No (Does not bound River)</option>
+                </select>
+            </div>
+            <!-- 5. NOX: nitric oxides concentration (parts per 10 million) -->
+            <div>
+                <label for="nox">NOX (Nitric Oxides Conc.)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="nox"
+                    name="nox"
+                    placeholder="e.g., 0.538"
+                    required
+                >
+            </div>
+            <!-- 6. RM: average number of rooms per dwelling -->
+            <div>
+                <label for="rm">RM (Avg. Rooms)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="rm"
+                    name="rm"
+                    placeholder="e.g., 6.575"
+                    required
+                >
+            </div>
+            <!-- 7. AGE: proportion of owner-occupied units built prior to 1940 -->
+            <div>
+                <label for="age">AGE (Prop. Units Pre-1940)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="age"
+                    name="age"
+                    placeholder="e.g., 65.2"
+                    required
+                >
+            </div>
+            <!-- 8. DIS: weighted distances to five Boston employment centres -->
+            <div>
+                <label for="dis">DIS (Weighted Dist. to Employment Centers)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="dis"
+                    name="dis"
+                    placeholder="e.g., 4.0900"
+                    required
+                >
+            </div>
+            <!-- 9. RAD: index of accessibility to radial highways -->
+            <div>
+                <label for="rad">RAD (Radial Highway Access Index)</label>
+                <input
+                    type="number"
+                    step="1"
+                    id="rad"
+                    name="rad"
+                    placeholder="e.g., 1"
+                    required
+                >
+            </div>
+            <!-- 10. TAX: full-value property-tax rate per $10,000 -->
+            <div>
+                <label for="tax">TAX (Property Tax Rate)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="tax"
+                    name="tax"
+                    placeholder="e.g., 296"
+                    required
+                >
+            </div>
+            <!-- 11. PTRATIO: pupil-teacher ratio by town -->
+            <div>
+                <label for="ptratio">PTRATIO (Pupil-Teacher Ratio)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="ptratio"
+                    name="ptratio"
+                    placeholder="e.g., 15.3"
+                    required
+                >
+            </div>
+            <!-- 12. B: 1000(Bk - 0.63)^2 where Bk is the proportion of Black residents by town -->
+            <div>
+                <label for="b">B (Prop. of Black Residents)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="b"
+                    name="b"
+                    placeholder="e.g., 396.90"
+                    required
+                >
+            </div>
+            <!-- 13. LSTAT: % lower status of the population -->
+            <div>
+                <label for="lstat">LSTAT (% Lower Status Population)</label>
+                <input
+                    type="number"
+                    step="any"
+                    id="lstat"
+                    name="lstat"
+                    placeholder="e.g., 4.98"
+                    required
+                >
+            </div>
+
+            <!-- Submission button -->
+            <div>
+                <button type="submit">
+                    Submit Data
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
